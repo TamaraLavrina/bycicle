@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="page">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Приобрести велосипед мечты по доступной цене">
+  <link rel="preload" href="../fonts/open-sans-v27-latin_cyrillic-300.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="../fonts/open-sans-v27-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="../fonts/open-sans-v27-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="../fonts/open-sans-v27-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
+  <title>Moon. Магазин велосипедов</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+<body class="page__body">
+  <header class="main-header">
+    <div class="main-header__wrapper">
+
+      <nav class="main-header__nav nav">
+        <button class="nav__toggle" type="button" aria-label="Мобильное меню"> Открыть
+        </button>
+        <ul>
+          <li>
+            <a href="#about">О нас</a>
+          </li>
+          <li>
+            <a href="#types">Виды велосипедов</a>
+          </li>
+          <li>
+            <a href="#video">Видео про велосипеды</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-header__content">
+        <div class="main-header__text">
+          <a class="main-header__logo">
+            <img src="./img/logo.svg" width="68" height="21" alt="Логотип компании Moon">
+          </a>
+          <h1>Мы продаем велосипеды</h1>
+          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        </div>
+        <form class="main-header__form order-form" name="order" action="https://echo.htmlacademy.ru/" method="POST">
+          <fieldset>
+            <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
+            <div class="order-form__wrapper">
+              <label class="visually-hidden" for="userName">Введите Ваше Имя</label>
+                <input type="text" name="user-name" id="userName" placeholder="Введите Ваше Имя" required="">
+              <label class="visually-hidden" for="userPhone">Введите Ваш номер телефона</label>
+                  <input type="tel" name="user-phone" id="userPhone" autocomplete="off" placeholder="Введите Ваш номер телефона" required="">
+                <button type="submit">Подобрать велосипед мечты</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main></main>
+  <footer></footer>
 </body>
 </html>

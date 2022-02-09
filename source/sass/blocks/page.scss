@@ -1,0 +1,15 @@
+.page {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: 400;
+  color: $color-black-00;
+}
