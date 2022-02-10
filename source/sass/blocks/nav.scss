@@ -6,14 +6,9 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
-    background-color: $color-white-00;
-    width: 320px;
-    height: 568px;
-    padding: 100px 0 138px;
-    justify-content: space-around;
-    align-items: flex-start;
+    padding: 0;
+    z-index:2;
     opacity: 1;
-    border: 1px solid red;
   }
 
 }
@@ -28,10 +23,11 @@
   list-style-type: none;
 
   @media (max-width: $tablet-width) {
+    min-height: 568px;
+    padding: 100px 0 138px;
+    opacity: 1;
     flex-direction: column;
     background-color: $color-white-00;
-
-    padding: 0;
     justify-content: space-around;
     align-items: flex-start;
   }
@@ -100,4 +96,30 @@
     background-image: url("../img/icon-arrow.svg");
     opacity: 1;
   }
+
+  .nav--closed ul {
+    display: none;
+  }
+
+  .nav--opened .nav ul {
+    display: flex;
+    z-index: 10;
+  }
+
+  .nav--closed .nav__toggle {
+    background-image: url("../img/menu-open.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 30px 30px;
+    background-color: $color-acent-00;
+  }
+
+  .nav--opened .nav__toggle {
+    background-image: url("../img/modal-close.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: inherit;
+    z-index: 10;
+  }
 }
+
