@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Приобрести велосипед мечты по доступной цене">
-  <link rel="preload" href="../fonts/open-sans-v27-latin_cyrillic-300.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="../fonts/open-sans-v27-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="../fonts/open-sans-v27-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="../fonts/open-sans-v27-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v27-latin_cyrillic-300.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v27-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v27-latin_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./fonts/open-sans-v27-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
   <title>Moon. Магазин велосипедов</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body class="page__body">
   <header class="main-header">
@@ -57,7 +57,41 @@
     </div>
   </header>
   <main></main>
-  <footer></footer>
+  <footer class="footer">
+    <section class="footer__adress">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19 </p>
+    </section>
+    <div class="footer__map map">
+      <img srcset="./img/map-mobile@1x.png 320w,
+      ./img/map-mobile@2x.png 640w,
+      ./img/map-tablet@1x.png 698w,
+      ./img/map-tablet@2x.png 1396w,
+      ./img/map@1x.png 957w,
+      ./img/map@2x.png 1914w" sizes="
+        (min-width: 1024px) 957px,
+        ((min-width: 1024px) and (min-resolution: 2dppx)) 1914px,
+        (min-width: 768px) 698px,
+        ((min-width: 768px) and (min-resolution: 2dppx)) 1396px,
+        (max-width: 767px) 320px,
+        ((max-width: 767px) and (min-resolution: 2dppx)) 640px" width="957" height="530" loading="lazy" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.3208946163472!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1644498514098!5m2!1sru!2sru" width="957" height="530" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+    <div class="footer__contacts">
+      <a href="mailto:puteshestviemechta@gmail.ru"><svg width="26" height="20" class="contacts__mailicon">
+        <use xlink:href="./img/sprite.svg#mail"></use>
+      </svg> puteshestviemechta@gmail.ru</a>
+      <a href="tel:+749978468446">
+        <svg width="30" height="30" class="contacts__phone">
+          <use xlink:href="./img/sprite.svg#phone"></use>
+        </svg>
+        +7 (499) -784-684-46
+      </a>
+    </div>
+  </footer>
   <script src="js/main.js" type="module"></script>
 </body>
+
 </html>
+
