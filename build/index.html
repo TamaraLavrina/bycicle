@@ -75,7 +75,10 @@
         <li>
           <div>
             <picture>
-              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <!-- desktop:
+                1x - 342px; 2x - 684px;
+                mobile/tablet:
+                1x - 270px; 2x - 540px;   -->
               <!-- web-p-->
               <source type="image/webp" media="(min-width: 1024px)" srcset="./img/kinds/road-bike-desk@1.webp 1x,
                ./img/kinds/road-bike-desk@2.webp 2x">
@@ -154,7 +157,36 @@
     <section class="video" id="video">
       <h2>Видео про велосипеды</h2>
       <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
-      <img src="./img/video/video-desk@1x.jpg" width="929" height="522">
+      <picture>
+        <!-- desktop:
+          1x - 929px; 2x - 1858px,
+          tablet: 1x - 503px; 2x - 1006px;
+          mobile: 1x - 288; 2x - 576px; -->
+        <!-- web-p-->
+        <source type="image/webp" media="(min-width: 1024px)" srcset="./img/video/video-desk@1x.webp 1x,
+         ./img/video/video-desk@2.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-tab@1x.webp 1x,
+     ./img/video/video-tab@2x.webp 2x">
+     <source type="image/webp" media="(max-width: 767px)" srcset="./img/video/video-mob@1x.webp 1x,
+     ./img/video/video-mob@2x.webp 2x">
+        <!-- -->
+        <img srcset="
+        ./img/video/video-desk@1x.jpg 929w,
+        ./img/video/video-desk@2x.jpg 1858w,
+        ./img/video/video-tab@1x.jpg 503w,
+        ./img/video/video-tab@2x.jpg 1006w,
+        ./img/video/video-mob@1x.jpg 288ww,
+        ./img/video/video-mob@2x.jpg 576w
+         " sizes="
+        (min-width: 1024px) 929px,
+        ((min-width: 1024px) and (min-resolution: 2dppx)) 1858px,
+        (max-width: 1023px) 503px,
+        ((max-width: 1023px) and (min-resolution: 2dppx)) 1006px,
+        (max-width: 767px) 288px,
+        ((max-width: 767px) and (min-resolution: 2dppx)) 576px,
+
+        " src="./img/video/video-desk@1x.jpg" width="929" height="522" loading="lazy" alt="Дорожный велосипед">
+      </picture>
     </section>
   </main>
   <footer id="contacts" class="footer">
