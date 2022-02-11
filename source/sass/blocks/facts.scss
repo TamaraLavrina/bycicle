@@ -61,7 +61,7 @@ counter-reset:  item;
 
 }
 
-li:nth-child(-n+9)::before {
+.facts li::before {
   content: '0' counter(item);
   counter-increment: item; /* Задаём имя счетчика */
   display: block;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,11 @@
   <title>Moon. Магазин велосипедов</title>
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
+
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-<!-- 'nav--closed' зкарывает меню в планштеной/мобильной версиях, 'nav--opened' - открывает -->
+      <!-- 'nav--closed' зкарывает меню в планштеной/мобильной версиях, 'nav--opened' - открывает -->
       <nav class="main-header__nav nav nav--closed nav--nojs">
         <button class="nav__toggle" type="button" aria-label="Мобильное меню"></button>
         <ul>
@@ -23,7 +25,7 @@
             <a href="#about">О нас</a>
           </li>
           <li>
-            <a href="#types">Виды велосипедов</a>
+            <a href="#kindes">Виды велосипедов</a>
           </li>
           <li>
             <a href="#video">Видео про велосипеды</a>
@@ -45,11 +47,12 @@
           <fieldset>
             <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
             <div class="order-form__wrapper">
-              <label class="visually-hidden" for="userName" >Введите Ваше Имя</label>
-                <input type="text" name="user-name" id="userName" placeholder="Введите Ваше Имя" required>
-              <label  class="visually-hidden" for="userPhone">Введите Ваш номер телефона</label>
-                  <input type="tel" name="user-phone" id="userPhone" autocomplete="off" placeholder="Введите Ваш номер телефона" required>
-                <button type="submit">Подобрать велосипед мечты</button>
+              <label class="visually-hidden" for="userName">Введите Ваше Имя</label>
+              <input type="text" name="user-name" id="userName" placeholder="Введите Ваше Имя" required>
+              <label class="visually-hidden" for="userPhone">Введите Ваш номер телефона</label>
+              <input type="tel" name="user-phone" id="userPhone" autocomplete="off"
+                placeholder="Введите Ваш номер телефона" required>
+              <button type="submit">Подобрать велосипед мечты</button>
             </div>
           </fieldset>
         </form>
@@ -57,17 +60,107 @@
     </div>
   </header>
   <main>
-    <section class="facts">
+    <section id="about" class="facts">
       <h2>Несколько фактов о нас</h2>
       <ol>
         <li>Самый широкий выбор велосипедов!</li>
         <li>Доставка велосипедов по всей России!</li>
         <li>Большой выбор крутых аксессуаров!</li>
         <li>Профессиональные консультации!</li>
-      </щl>
+      </ol>
+    </section>
+
+    <section id="kindes" class="kinds">
+      <h2>Виды велосипедов </h2>
+      <ul>
+        <li>
+          <div>
+            <picture>
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <!-- web-p-->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/kinds/road-bike-desk@1.webp 1x,
+               ./img/kinds/road-bike-desk@2.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/kinds/road-bike-mob@1.webp 1x,
+           ./img/kinds/road-bike-mob@2x.webp 2x">
+              <!-- -->
+              <img srcset="
+               ./img/kinds/road-bike-mob@1.jpg 270w,
+               ./img/kinds/road-bike-mob@2.jpg 540w,
+               ./img/kinds/road-bike-desk@1.jpg 342w,
+               ./img/kinds/road-bike-desk@2.jpg 684w
+               " sizes="
+              (min-width: 1024px) 342px,
+              ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+              (max-width: 1023px) 270px,
+              ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+              " src="./img/kinds/road-bike-desk@1.jpg" width="342" height="503" loading="lazy"
+                alt="Дорожный велосипед">
+            </picture>
+          </div>
+          <h3>Дорожный велосипед</h3>
+        </li>
+        <li>
+          <div>
+            <picture>
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <!-- web-p-->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/kinds/mountain-bike-desk@1.webp 1x,
+                             ./img/kinds/mountain-bike-desk@2.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/kinds/mountain-bike-mob@1.webp 1x,
+                         ./img/kinds/mountain-bike-mob@2x.webp 2x">
+              <!-- -->
+              <img srcset="
+            ./img/kinds/mountain-bike-mob@1.jpg 270w,
+            ./img/kinds/mountain-bike-mob@2.jpg 540w,
+            ./img/kinds/mountain-bike-desk@1.jpg 342w,
+            ./img/kinds/mountain-bike-desk@2.jpg 684w
+            " sizes="
+           (min-width: 1024px) 342px,
+           ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+           (max-width: 1023px) 270px,
+           ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+           " src="./img/kinds/mountain-bike-desk@1.jpg" width="342" height="503" loading="lazy" alt="Горный велосипед">
+
+            </picture>
+          </div>
+          <h3>Горный велосипед</h3>
+        </li>
+        <li>
+          <div>
+            <picture>
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <!-- web-p-->
+              <source type="image/webp" media="(min-width: 1024px)" srcset="./img/kinds/childrens-bike-desk@1.webp 1x,
+                             ./img/kinds/childrens-bike-desk@2.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/kinds/childrens-bike-mob@1.webp 1x,
+                         ./img/kinds/childrens-bike-mob@2x.webp 2x">
+              <!-- -->
+              <img srcset="
+            ./img/kinds/childrens-bike-mob@1.jpg 270w,
+            ./img/kinds/childrens-bike-mob@2.jpg 540w,
+            ./img/kinds/childrens-bike-desk@1.jpg 342w,
+            ./img/kinds/childrens-bike-desk@2.jpg 684w
+            " sizes="
+           (min-width: 1024px) 342px,
+           ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+           (max-width: 1023px) 270px,
+           ((max-width: 1023px) and (min-resolution: 2dppx)) 540px
+           " src="./img/kinds/childrens-bike-desk@1.jpg" width="342" height="503" loading="lazy"
+                alt="Детский велосипед">
+            </picture>
+          </div>
+          <h3>Детский велосипед</h3>
+        </li>
+      </ul>
+    </section>
+
+    <section class="video" id="video">
+      <h2>Видео про велосипеды</h2>
+      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+      <img src="./img/video/video-desk@1x.jpg" width="929" height="522">
     </section>
   </main>
-  <footer class="footer">
+  <footer id="contacts" class="footer">
     <section class="footer__adress">
       <h2>Как нас найти?</h2>
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19 </p>
@@ -78,7 +171,8 @@
       ./img/map-tablet@1x.png 698w,
       ./img/map-tablet@2x.png 1396w,
       ./img/map@1x.png 957w,
-      ./img/map@2x.png 1914w" sizes="
+      ./img/map@2x.png 1914w
+      " sizes="
         (min-width: 1024px) 957px,
         ((min-width: 1024px) and (min-resolution: 2dppx)) 1914px,
         (min-width: 768px) 698px,
@@ -92,10 +186,9 @@
       </iframe>
     </div>
     <div class="footer__contacts">
-      <a href="mailto:puteshestviemechta@gmail.ru"><svg width="26" height="20"
-        class="contacts__mailicon">
-        <use xlink:href="./img/sprite.svg#mail"></use>
-      </svg> puteshestviemechta@gmail.ru</a>
+      <a href="mailto:puteshestviemechta@gmail.ru"><svg width="26" height="20" class="contacts__mailicon">
+          <use xlink:href="./img/sprite.svg#mail"></use>
+        </svg> puteshestviemechta@gmail.ru</a>
       <a href="tel:+749978468446">
         <svg width="30" height="30" class="contacts__phone">
           <use xlink:href="./img/sprite.svg#phone"></use>
@@ -108,4 +201,3 @@
 </body>
 
 </html>
-
