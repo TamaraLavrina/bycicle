@@ -1,0 +1,73 @@
+.facts {
+  width: 90%;
+  max-width: 1166px;
+  margin: 150px auto 130px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 72%;
+  }
+}
+
+.facts h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+    line-height: 41px;
+  }
+}
+
+.facts ol {
+padding: 0;
+display: grid;
+grid-template-columns: repeat(4, minmax(min-content, 263px));;
+gap: 20px;
+justify-content: space-between;
+list-style-type: none;
+counter-reset:  item;
+
+@media (max-width: $tablet-width) {
+  grid-template-columns: repeat(2, 263px);;
+}
+
+@media (max-width: $mobile-width) {
+  grid-template-columns: 1fr;
+}
+}
+
+.facts li {
+  margin-bottom: 40px;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: center;
+  font-weight: 400;
+
+  @media (max-width: $tablet-width) {
+    font-size: 22px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+  }
+
+}
+
+li:nth-child(-n+9)::before {
+  content: '0' counter(item);
+  counter-increment: item; /* Задаём имя счетчика */
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1.27px;
+  color: $color-acent-00;
+  margin-bottom: 20px;
+}
