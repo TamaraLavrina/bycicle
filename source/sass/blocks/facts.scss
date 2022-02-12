@@ -1,10 +1,18 @@
 .facts {
   width: 90%;
   max-width: 1166px;
-  margin: 150px auto 130px;
+  margin: 150px auto 110px;
 
   @media (max-width: $tablet-width) {
     max-width: 72%;
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 98%;
+    letter-spacing: -0.5px;
+    margin-bottom: 60px;
   }
 }
 
@@ -18,6 +26,7 @@
   @media (max-width: $tablet-width) {
     font-size: 24px;
     line-height: 41px;
+    margin-bottom: 30px;
   }
 
   @media (max-width: $mobile-width) {
@@ -50,24 +59,30 @@ counter-reset:  item;
   line-height: 34px;
   text-align: center;
   font-weight: 400;
+  letter-spacing: -0.5px;
 
   @media (max-width: $tablet-width) {
     font-size: 22px;
+    margin-bottom: 25px;
   }
 
   @media (max-width: $mobile-width) {
     font-size: 18px;
+    margin-bottom: 20px;
   }
-
 }
 
 .facts li::before {
   content: '0' counter(item);
-  counter-increment: item; /* Задаём имя счетчика */
+  counter-increment: item;
   display: block;
   font-size: 28px;
   font-weight: 700;
   letter-spacing: -1.27px;
   color: $color-acent-00;
   margin-bottom: 20px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 17px;
+  }
 }

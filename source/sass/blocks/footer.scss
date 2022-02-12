@@ -2,6 +2,10 @@
   padding-top: 150px;
   max-width: 957px;
   margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 70px;
+  }
 }
 
 .footer__adress {
@@ -31,7 +35,8 @@
   line-height: 31px;
 
   @media (max-width: $tablet-width) {
-    max-width: 85%;
+    max-width: 95%;
+    margin: 20px auto 22px;
   }
 
   @media (max-width: $mobile-width) {
@@ -59,21 +64,23 @@
 .footer__contacts {
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  max-width: 60%;
   justify-content: space-between;
-  margin: 39px auto 98px;
+  margin: 38px 22% 98px 20%;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
 
   @media (max-width: $tablet-width) {
-    width: 85%;
+    max-width: 79%;
+    margin: 18px 10% 53px;
+    column-gap: 40px;
   }
 
   @media (max-width: $mobile-width) {
-    width: 90%;
+    max-width: 100%;
     justify-content: center;
-    margin: 31px auto 28px;
+    margin: 26px auto 28px;
   }
 }
 
@@ -83,7 +90,7 @@
   color: $contact-text;
 
   @media (max-width: $mobile-width) {
- margin-bottom: 22px;
+    margin-bottom: 22px;
   }
 }
 
@@ -93,6 +100,6 @@
 
 .footer svg {
   vertical-align: middle;
-  margin-right: 15px;
+  margin-right: 12px;
   fill: #0AD9C6;
 }

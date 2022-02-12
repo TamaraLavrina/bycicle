@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="ru" class="page no-js">
 
 <head>
   <meta charset="UTF-8">
@@ -157,6 +157,11 @@
     <section class="video" id="video">
       <h2>Видео про велосипеды</h2>
       <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+      <button type="button" aria-label="Воспроизвести видео">
+          <svg width="65" height="65">
+            <use xlink:href="./img/sprite.svg#play"></use>
+          </svg>
+      </button>
       <picture>
         <!-- desktop:
           1x - 929px; 2x - 1858px,
@@ -212,9 +217,12 @@
       </iframe>
     </div>
     <div class="footer__contacts">
-      <a href="mailto:puteshestviemechta@gmail.ru"><svg width="26" height="20" class="contacts__mailicon">
+      <a href="mailto:puteshestviemechta@gmail.ru">
+        <svg width="26" height="20" class="contacts__mailicon">
           <use xlink:href="./img/sprite.svg#mail"></use>
-        </svg> puteshestviemechta@gmail.ru</a>
+        </svg>
+        puteshestviemechta@gmail.ru
+      </a>
       <a href="tel:+749978468446">
         <svg width="30" height="30" class="contacts__phone">
           <use xlink:href="./img/sprite.svg#phone"></use>
@@ -223,6 +231,7 @@
       </a>
     </div>
   </footer>
+  <script src="js/vendors/modernizr-custom.js"></script>
   <script src="js/main.js" type="module"></script>
 </body>
 

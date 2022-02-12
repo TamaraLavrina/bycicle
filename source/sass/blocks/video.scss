@@ -1,14 +1,25 @@
 .video {
-  padding-top: 120px;
-  background: linear-gradient(180deg, $color-black-100 86%, $color-white-00 86%);
+  position: relative;
+  padding-top: 95px;
+  background: linear-gradient(180deg, $color-black-100 88%, $color-white-00 88%);
   color: $color-white-00;
   text-align: center;
+
+  @media (max-width: $tablet-width) {
+  padding-top: 55px;
+  background: linear-gradient(180deg, $color-black-100 83%, $color-white-00 83%);
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 67px;
+  }
 }
 
 .video h2 {
   font-size: 30px;
   line-height: 1;
   font-weight: 600;
+  margin-bottom: 20px;
 
   @media (max-width: $tablet-width) {
     font-size: 24px;
@@ -18,17 +29,19 @@
 .video p {
   display: block;
   max-width: 25%;
-  margin: 20px auto 56px;
+  margin: 20px auto 57px;
   font-size: 16px;
   line-height: 28px;
   font-weight: 300;
 
   @media (max-width: $tablet-width) {
     max-width: 56%;
+    margin-bottom: 44px;
   }
 
   @media (max-width: $mobile-width) {
     max-width: 92%;
+    margin-bottom: 55px;
   }
 }
 
@@ -41,5 +54,47 @@
 
   @media (max-width: $mobile-width) {
     max-width: 90%;
+  }
+}
+
+.video button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  left: 48%;
+  top: 64%;
+
+  @media (max-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+    left: 44%;
+    top: 63%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 65px;
+    height: 65px;
+    left: 40%;
+    top: 74%;
+  }
+}
+
+.video button:hover {
+  transform: scale(1.2);
+}
+
+.video svg {
+  @media (max-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 65px;
+    height: 65px;
   }
 }
