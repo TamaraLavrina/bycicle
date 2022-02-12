@@ -45,6 +45,7 @@
     background-image: image-set(url("../img/header/hb-tablet@1x.jpg") 2x, url("../img/header/hb-tablet@2x.jpg") 1x);
     display: block;
     position: static;
+    width: 100%;
     min-height: 340px;
     grid-row: 1;
     grid-column: -1/1;
@@ -57,7 +58,6 @@
   @media (max-width: $mobile-width) {
     background-image: image-set(url("../img/header/hb-mobile@1x.jpg") 2x, url("../img/header/hb-mobile@2x.jpg") 1x);
     min-height: 390px;
-    margin: 0 -16px;
   }
 }
 
