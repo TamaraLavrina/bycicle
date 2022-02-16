@@ -1,0 +1,24 @@
+ @media (max-width: $tablet-width) {
+  .no-js .main-header {
+    grid-template-rows: 568px 1fr 1fr;
+    position: static;
+  }
+
+  .no-js .nav ul {
+    grid-row: 1/2;
+    display: block;
+  }
+
+  .no-js .main-header::before,
+  .no-js .main-header__text {
+    grid-row: 2/3;
+  }
+
+  .no-js .main-header__form {
+    grid-row: 3/4;
+  }
+
+  .no-js .nav__toggle {
+    display: none;;
+  }
+ }

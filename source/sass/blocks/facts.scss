@@ -73,7 +73,7 @@ counter-reset:  item;
 }
 
 .facts li::before {
-  content: '0' counter(item);
+  content: "0" counter(item);
   counter-increment: item;
   display: block;
   font-size: 28px;
