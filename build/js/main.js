@@ -1,28 +1,82 @@
-import { onCloseMenuClick, onMenuClick } from './menu.js';
-import { onPhoneInput } from './form.js';
+'use strict';
+(function () {
+  var navMain = document.querySelector('.main-header__nav');
+  var navToggle = document.querySelector('.nav__toggle');
+  var form = document.querySelector('.order-form');
+  var userPhone = form.querySelector('#userPhone');
+  var phoneRegEx = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+  var iFrame = document.querySelector('#iframe');
+  var navMenu = document.querySelector('.main-header__nav');
+  var menuList = navMenu.querySelector('ul');
+  var submit = document.querySelector('button[type="submit"]');
 
-const navMain = document.querySelector('.main-header__nav');
-const navToggle = document.querySelector('.nav__toggle');
-const form = document.querySelector('.order-form');
-const userPhone = form.querySelector('#userPhone');
-const iFrame = document.querySelector('#iframe');
-const navMenu = document.querySelector('.main-header__nav');
-const menuList = navMenu.querySelector('ul');
-const page = document.querySelector('html');
+  navMain.classList.remove('nav--nojs');
 
-page.classList.remove('no-js');
-navMain.classList.remove('nav--nojs');
+  function validatePhone(input) {
+    if (!phoneRegEx.test(input.value)) {
+      input.setCustomValidity(
+          'Номер телефона должен содержать не менее 7 цифр');
+    } else {
+      input.setCustomValidity('');
+    }
+    input.reportValidity();
+  }
 
-if (iFrame) {
-  iFrame.removeAttribute('hidden')
-}
+  userPhone.addEventListener('input', function (evt) {
+    validatePhone(evt.target);
+  });
 
-if(navMenu) {
-  navMenu.classList.add('nav--closed');
-}
+  submit.addEventListener('submit', function (evt) {
+    validatePhone(evt.target);
+  });
 
+  if (iFrame) {
+    iFrame.removeAttribute('hidden');
+  }
+  if (navMenu) {
+    navMenu.classList.add('nav--closed');
+  }
 
-navToggle.addEventListener('click', onMenuClick);
-navMenu.addEventListener('keydown', onCloseMenuClick);
-menuList.addEventListener('click', onCloseMenuClick);
-userPhone.addEventListener('input', onPhoneInput);
+  function onMenuClick() {
+    if (navMain.classList.contains('nav--closed')) {
+      navMain.classList.remove('nav--closed');
+      navMain.classList.add('nav--opened');
+      menuList.addEventListener('click', function () {
+        onCloseMenu();
+      });
+    } else {
+      navMain.classList.add('nav--closed');
+      navMain.classList.remove('nav--opened');
+      menuList.removeEventListener('click', function () {
+        onCloseMenu();
+      });
+    }
+  }
+
+  navToggle.addEventListener('click', function () {
+    onMenuClick();
+  });
+
+  function onCloseMenu(evt) {
+    if ((navMain.classList.contains('nav--opened')) || evt.key === 'Escape' || evt.key === 'Esc' || (evt.target.tagName === 'a')) {
+      navMain.classList.remove('nav--opened');
+      navMenu.classList.add('nav--closed');
+      navMenu.removeEventListener('click', function () {
+        onCloseMenu();
+      });
+      document.removeEventListener('keydown', function () {
+        onCloseMenu();
+      });
+      menuList.removeEventListener('click', function () {
+        onCloseMenu();
+      });
+    }
+  }
+
+  navMenu.addEventListener('keydown', function () {
+    onCloseMenu();
+  });
+  menuList.addEventListener('click', function () {
+    onCloseMenu();
+  });
+}());
