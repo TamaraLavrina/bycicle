@@ -1,6 +1,4 @@
 .nav {
-  padding-top: 22px;
-  padding-bottom: 8px;
   width: 100%;
   font-weight: 300;
 
@@ -14,6 +12,7 @@
 
 .nav ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-left: 0;
   margin: 0;
@@ -45,7 +44,7 @@
 .nav a {
   display: block;
   font-size: 16px;
-  padding: 17px 16px 15px;
+  padding: 21px 20px 7px;
   line-height: 32px;
   text-decoration: none;
   color: $color-white-00;
@@ -97,6 +96,11 @@
 
   .nav--closed ul {
     display: none;
+  }
+
+  .nav--opened {
+    background-color: $color-white-00;
+    height: 100vh;
   }
 
   .nav--opened .nav ul {

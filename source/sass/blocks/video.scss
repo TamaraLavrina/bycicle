@@ -1,5 +1,4 @@
 .video {
-  position: relative;
   padding-top: 95px;
   background: linear-gradient(180deg, $color-black-100 88%, $color-white-00 88%);
   color: $color-white-00;
@@ -12,6 +11,7 @@
 
   @media (max-width: $mobile-width) {
     padding-top: 67px;
+    background: linear-gradient(180deg, $color-black-100 88%, $color-white-00 88%);
   }
 }
 
@@ -65,21 +65,21 @@
   width: 65px;
   height: 65px;
   padding: 0;
-  left: 48%;
-  top: 64%;
+  left: calc(50% - 32px);
+  top: calc(50% - 32px);
 
   @media (max-width: $tablet-width) {
     width: 90px;
     height: 90px;
-    left: 44%;
-    top: 63%;
+    left: calc(50% - 45px);
+    top: calc(50% - 45px);
   }
 
   @media (max-width: $mobile-width) {
     width: 65px;
     height: 65px;
-    left: 40%;
-    top: 74%;
+    left: calc(50% - 32px);
+    top: calc(50% - 32px);
   }
 }
 
@@ -97,4 +97,8 @@
     width: 65px;
     height: 65px;
   }
+}
+
+.video__container {
+  position: relative;
 }

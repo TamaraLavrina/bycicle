@@ -37,7 +37,7 @@
       </nav>
       <div class="main-header__content">
         <div class="main-header__text">
-          <a href="#" class="main-header__logo">
+          <a class="main-header__logo">
             <img src="./img/logo.svg" width="68" height="21" alt="Логотип компании Moon">
           </a>
           <h1>Мы продаем велосипеды</h1>
@@ -157,40 +157,42 @@
     <section class="video" id="video">
       <h2>Видео про велосипеды</h2>
       <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
-      <button type="button" aria-label="Воспроизвести видео">
-        <svg width="65" height="65">
-          <use xlink:href="./img/sprite.svg#play"></use>
-        </svg>
-      </button>
-      <picture>
-        <!-- desktop:
-          1x - 929px; 2x - 1858px,
-          tablet: 1x - 503px; 2x - 1006px;
-          mobile: 1x - 288; 2x - 576px; -->
-        <!-- web-p-->
-        <source type="image/webp" media="(min-width: 1024px)" srcset="./img/video/video-desk@1x.webp 1x,
-          ./img/video/video-desk@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-tab@1x.webp 1x,
-      ./img/video/video-tab@2x.webp 2x">
-        <source type="image/webp" media="(max-width: 767px)" srcset="./img/video/video-mob@1x.webp 1x,
-      ./img/video/video-mob@2x.webp 2x">
-        <!-- -->
-        <img srcset="
-        ./img/video/video-desk@1x.jpg 929w,
-        ./img/video/video-desk@2x.jpg 1858w,
-        ./img/video/video-tab@1x.jpg 503w,
-        ./img/video/video-tab@2x.jpg 1006w,
-        ./img/video/video-mob@1x.jpg 288w,
-        ./img/video/video-mob@2x.jpg 576w
-        " sizes="
-        (min-width: 1024px) 929px,
-        ((min-width: 1024px) and (min-resolution: 2dppx)) 1858px,
-        (max-width: 1023px) 503px,
-        ((max-width: 1023px) and (min-resolution: 2dppx)) 1006px,
-        (max-width: 767px) 288px,
-        ((max-width: 767px) and (min-resolution: 2dppx)) 576px
-        " src="./img/video/video-desk@1x.jpg" width="929" height="522" loading="lazy" alt="Дорожный велосипед">
-      </picture>
+      <div class="video__container">
+        <button type="button" aria-label="Воспроизвести видео">
+          <svg width="65" height="65">
+            <use xlink:href="./img/sprite.svg#play"></use>
+          </svg>
+        </button>
+        <picture>
+          <!-- desktop:
+            1x - 929px; 2x - 1858px,
+            tablet: 1x - 503px; 2x - 1006px;
+            mobile: 1x - 288; 2x - 576px; -->
+          <!-- web-p-->
+          <source type="image/webp" media="(min-width: 1024px)" srcset="./img/video/video-desk@1x.webp 1x,
+            ./img/video/video-desk@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/video/video-tab@1x.webp 1x,
+        ./img/video/video-tab@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 767px)" srcset="./img/video/video-mob@1x.webp 1x,
+        ./img/video/video-mob@2x.webp 2x">
+          <!-- -->
+          <img srcset="
+          ./img/video/video-desk@1x.jpg 929w,
+          ./img/video/video-desk@2x.jpg 1858w,
+          ./img/video/video-tab@1x.jpg 503w,
+          ./img/video/video-tab@2x.jpg 1006w,
+          ./img/video/video-mob@1x.jpg 288w,
+          ./img/video/video-mob@2x.jpg 576w
+          " sizes="
+          (min-width: 1024px) 929px,
+          ((min-width: 1024px) and (min-resolution: 2dppx)) 1858px,
+          (max-width: 1023px) 503px,
+          ((max-width: 1023px) and (min-resolution: 2dppx)) 1006px,
+          (max-width: 767px) 288px,
+          ((max-width: 767px) and (min-resolution: 2dppx)) 576px
+          " src="./img/video/video-desk@1x.jpg" width="929" height="522" loading="lazy" alt="Дорожный велосипед">
+        </picture>
+      </div>
     </section>
   </main>
   <footer id="contacts" class="footer">

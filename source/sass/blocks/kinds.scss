@@ -1,14 +1,14 @@
 .kinds {
-  padding: 149px 0 148px;
+  padding: 150px 0 148px;
   background-color: $color-background;
   text-align: center;
 
   @media (max-width: $tablet-width) {
-    padding: 50px 0 20px;
+    padding: 50px 0 24px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-bottom: 12px;
+    padding-bottom: 10px;
   }
 }
 
@@ -38,6 +38,7 @@
 
 .kinds ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 48px 0 23px;
   margin: 0 auto;
@@ -60,13 +61,16 @@
   list-style-type: none;
   margin-left: 25px;
   z-index: 1;
+  flex-basis: 30%;
 
   @media (max-width: $tablet-width) {
     margin: 0 24px 50px 24px;
+    flex-basis: calc(50% - 50px);
   }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 42px;
+    flex-basis: 100%;
   }
 }
 
