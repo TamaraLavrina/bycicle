@@ -88,10 +88,7 @@
   display: block;
   text-decoration: none;
   color: $contact-text;
-
-  @media (max-width: $mobile-width) {
-    margin-bottom: 22px;
-  }
+  margin-bottom: 22px
 }
 
 .footer a:hover {
@@ -101,5 +98,5 @@
 .footer svg {
   vertical-align: middle;
   margin-right: 12px;
-  fill: #0AD9C6;
+  fill: $color-acent-00;
 }
