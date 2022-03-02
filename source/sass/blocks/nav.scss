@@ -89,11 +89,15 @@
     content: "";
     position: absolute;
     right: 18px;
-    top: 17px;
+    top: calc(50% - 13px);
     width: 25px;
     height: 25px;
     background-image: url("../img/icon-arrow.svg");
     opacity: 1;
+  }
+
+  .nav a {
+    padding: 17px 20px;
   }
 
   .nav--closed ul {
@@ -102,7 +106,7 @@
 
   .nav--opened {
     background-color: $color-white-00;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .nav--opened .nav ul {
