@@ -9,6 +9,7 @@
   var navMenu = document.querySelector('.main-header__nav');
   var menuList = navMenu.querySelector('ul');
   var submit = document.querySelector('button[type="submit"]');
+  var body = document.querySelector('.page__body');
 
   navMain.classList.remove('nav--nojs');
 
@@ -38,6 +39,9 @@
   }
 
   function onMenuClick() {
+    if (!body.classList.contains('page__body--hidden')) {
+      body.classList.add('page__body--hidden');
+    }
     if (navMain.classList.contains('nav--closed')) {
       navMain.classList.remove('nav--closed');
       navMain.classList.add('nav--opened');
@@ -58,6 +62,9 @@
   });
 
   function onCloseMenu(evt) {
+    if (body.classList.contains('page__body--hidden')) {
+      body.classList.remove('page__body--hidden');
+    }
     if ((navMain.classList.contains('nav--opened')) || evt.key === 'Escape' || evt.key === 'Esc' || (evt.target.tagName === 'a')) {
       navMain.classList.remove('nav--opened');
       navMenu.classList.add('nav--closed');

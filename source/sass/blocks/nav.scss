@@ -21,6 +21,8 @@
   list-style-type: none;
 
   @media (max-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
     min-height: 568px;
     padding: 100px 0 138px;
     opacity: 1;
@@ -123,4 +125,5 @@
     background-color: inherit;
     z-index: 10;
   }
+
 }
