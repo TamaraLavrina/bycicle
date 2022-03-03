@@ -39,35 +39,36 @@
   }
 
   function onMenuClick() {
-    if (!body.classList.contains('page__body--hidden')) {
-      body.classList.add('page__body--hidden');
-    }
     if (navMain.classList.contains('nav--closed')) {
       navMain.classList.remove('nav--closed');
       navMain.classList.add('nav--opened');
+      body.classList.add('page__body--hidden');
       menuList.addEventListener('click', function () {
         onCloseMenu();
       });
     } else {
       navMain.classList.add('nav--closed');
       navMain.classList.remove('nav--opened');
-      menuList.removeEventListener('click', function () {
-        onCloseMenu();
-      });
+      body.classList.remove('page__body--hidden');
     }
+    menuList.removeEventListener('click', function () {
+      onCloseMenu();
+    });
   }
+
 
   navToggle.addEventListener('click', function () {
     onMenuClick();
   });
 
   function onCloseMenu(evt) {
-    if (body.classList.contains('page__body--hidden')) {
-      body.classList.remove('page__body--hidden');
-    }
     if ((navMain.classList.contains('nav--opened')) || evt.key === 'Escape' || evt.key === 'Esc' || (evt.target.tagName === 'a')) {
       navMain.classList.remove('nav--opened');
       navMenu.classList.add('nav--closed');
+      if (body.classList.contains('page__body--hidden')) {
+        body.classList.remove('page__body--hidden');
+      }
+
       navMenu.removeEventListener('click', function () {
         onCloseMenu();
       });

@@ -3,6 +3,7 @@
   font-weight: 300;
 
   @media (max-width: $tablet-width) {
+    width: 100vw;
     flex-direction: column;
     padding: 0;
     z-index:2;
@@ -21,10 +22,10 @@
   list-style-type: none;
 
   @media (max-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    width: 100vw;
+    overflow: scroll;
     min-height: 568px;
-    padding: 100px 0 138px;
+    padding: 18% 0 24%;
     opacity: 1;
     flex-direction: column;
     background-color: $color-white-00;
@@ -37,7 +38,6 @@
   @media (max-width: $tablet-width) {
     position: relative;
     width: 100%;
-
     margin-bottom: 30px;
     background-color: $color-background-01;
   }
@@ -71,7 +71,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 3;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -106,12 +106,20 @@
 
   .nav--opened {
     background-color: $color-white-00;
-    min-height: 100vh;
+    height: 100vh;
+    overflow-y: scroll;
   }
 
-  .nav--opened .nav ul {
-    display: flex;
+  .nav--opened  ul {
+    display: grid;
+    grid-template-columns: 100%;
     z-index: 10;
+    overflow-y: scroll;
+  }
+
+  .nav--opened  li {
+    display: grid;
+    width: 100%;
   }
 
   .nav--closed .nav__toggle {
@@ -127,7 +135,6 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: inherit;
-    z-index: 10;
+    z-index: 11;
   }
-
 }
